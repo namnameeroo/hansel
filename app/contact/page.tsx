@@ -54,16 +54,17 @@ export default function Contact() {
       ),
     },
   ];
+  const contactTextSize = "text-[1.4em] max-sm:text-[1em] lg:text-[2em]";
 
   return (
-    <main className="w-100vw flex min-h-screen flex-col bg-green-70 max-lg:p-[40px] lg:p-[87px]">
-      <header className="mb-[116px] flex h-[8.75em] flex-col justify-start lg:flex-row lg:items-end">
-        <h1 className="min-w-[5.75em] flex-1 text-[8.75em] max-lg:text-left lg:relative lg:top-[2.45rem] lg:mr-4">
+    <main className="w-100vw flex min-h-screen flex-col overflow-x-auto bg-green-70 max-lg:p-10 max-sm:p-5 lg:p-[87px]">
+      <header className="flex flex-col justify-start lg:mb-[7.25em] lg:h-[8.75em] lg:flex-row lg:items-end">
+        <h1 className="min-w-[5.75em] flex-1 max-lg:text-left max-sm:text-[3.5em] sm:text-[8.75em] lg:relative lg:top-[2.45rem] lg:mr-4">
           SOHEE 100
         </h1>
         <div className="flex flex-col gap-2">
           <div
-            className={`text-[2em] font-[600] ${libreBarcode39ExtendedText.className}`}
+            className={`text-[2em] font-[600] max-sm:text-[1.2em] ${libreBarcode39ExtendedText.className}`}
           >
             SOHUI, KIM, SOSIE
           </div>
@@ -73,14 +74,14 @@ export default function Contact() {
       </header>
       <section className="flex max-lg:flex-col">
         {/* left box */}
-        <div className="w-full rounded-tr-[3rem] bg-[#FFFFFF99] max-lg:my-[80px] max-lg:p-[20px] lg:absolute lg:bottom-0 lg:left-0 lg:h-[calc(100vh-295px)] lg:h-[calc(100vh-410px)] lg:w-[40%] lg:pl-[87px] lg:pt-[67px]">
+        <div className="w-full rounded-tr-[3rem] bg-[#FFFFFF99] max-lg:my-[40px] max-lg:py-[20px] lg:absolute lg:bottom-0 lg:left-0 lg:h-[calc(100vh-20.75em)] lg:w-[40%] lg:min-w-[29em] lg:pl-[87px] lg:pt-[67px]">
           <div
-            className={`text-[2em] font-[600] ${workSansExtraBold.className} `}
+            className={`font-[600] ${contactTextSize} ${workSansExtraBold.className}`}
           >
             based in London, UK now
           </div>
           <div
-            className={`text-[2em] font-[800] ${workSansExtraBold.className} underline`}
+            className={`font-[800] underline ${contactTextSize} ${workSansExtraBold.className}`}
           >
             thgml2926@gmail.com
           </div>
@@ -93,7 +94,7 @@ export default function Contact() {
               height={29}
             />
             <span
-              className={`text-[2em] font-[800] ${workSansExtraBold.className} `}
+              className={`font-[800] ${contactTextSize} ${workSansExtraBold.className}`}
             >
               100311311_
             </span>
@@ -102,30 +103,30 @@ export default function Contact() {
 
         {/* right 연혁 */}
 
-        <div className="grid grid-cols-5 lg:ml-[45%]">
+        <div className="grid grid-cols-5 max-md:grid-cols-1 lg:ml-[45%]">
           <div
-            className={`col-span-1 ${roboto.className} w-[100px] border-r-[1px] border-r-[#11111126] text-[2em]`}
+            className={`col-span-1 ${roboto.className} w-[100px] text-[2em] sm:border-r-[1px] sm:border-r-[#11111126]`}
           >
             {workItems[0].year}
           </div>
-          <div className="text-md col-span-4 pb-11">
+          <div className="text-md col-span-4 pb-11 max-md:text-xs">
             {workItems[0].contents}
           </div>
 
           <div
-            className={`col-span-1 ${roboto.className} w-[100px] border-r-[1px] border-r-[#11111126] text-[2em]`}
+            className={`col-span-1 ${roboto.className} w-[100px] text-[2em] sm:border-r-[1px] sm:border-r-[#11111126]`}
           >
             {workItems[1].year}
           </div>
-          <div className="text-md col-span-4 pb-11">
+          <div className="text-md col-span-4 pb-11 max-md:text-xs">
             {workItems[1].contents}
           </div>
           <div
-            className={`col-span-1 ${roboto.className} w-[100px] border-r-[1px] border-r-[#11111126] text-[2em]`}
+            className={`col-span-1 ${roboto.className} w-[100px] text-[2em] sm:border-r-[1px] sm:border-r-[#11111126]`}
           >
             {workItems[2].year}
           </div>
-          <div className="text-md col-span-4 pb-11">
+          <div className="text-md col-span-4 pb-11 max-md:text-xs">
             {workItems[2].contents}
           </div>
         </div>

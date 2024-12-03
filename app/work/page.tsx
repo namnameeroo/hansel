@@ -2,7 +2,7 @@
 import NavBar from "../_navBar";
 import { rubikBeastly } from "../font";
 
-export default function Page() {
+export default function Work() {
   return (
     <main className="w-100vw flex min-h-screen flex-col bg-black p-[87px]">
       <header className="mb-[116px] flex flex-col items-end justify-start lg:flex-row">

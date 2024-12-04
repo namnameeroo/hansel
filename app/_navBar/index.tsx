@@ -11,7 +11,7 @@ export default function NavBar() {
   };
 
   return (
-    <nav className="align-center flex justify-end border border-black bg-[#00F01C] text-[1em] max-lg:justify-around max-sm:text-[0.6em] sm:gap-5 sm:px-4 sm:text-[0.85em]">
+    <nav className="align-center flex justify-end whitespace-nowrap border border-black bg-[#00F01C] text-[1em] max-lg:justify-around max-sm:text-[0.6em] sm:gap-5 sm:px-4 sm:text-[0.85em]">
       <button onClick={() => router.push(links.MAIN)}>MAIN</button>
       <button onClick={() => router.push(links.WORK)}>WORK</button>
       <button onClick={() => router.push(links.STAFF)}>STAFF</button>

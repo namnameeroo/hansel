@@ -74,7 +74,7 @@ export default function Contact() {
       </header>
       <section className="flex max-lg:flex-col">
         {/* left box */}
-        <div className="w-full rounded-tr-[3rem] bg-[#FFFFFF99] max-lg:my-[40px] max-lg:py-[20px] lg:absolute lg:bottom-0 lg:left-0 lg:h-[calc(100vh-20.75em)] lg:w-[40%] lg:min-w-[29em] lg:pl-[87px] lg:pt-[67px]">
+        <div className="w-full rounded-tr-[3rem] bg-[#FFFFFF99] max-lg:my-[40px] max-lg:py-[20px] lg:fixed lg:bottom-0 lg:left-0 lg:h-[calc(100vh-20.75em)] lg:w-[40%] lg:min-w-[29em] lg:pl-[87px] lg:pt-[67px]">
           <div
             className={`font-[600] ${contactTextSize} ${workSansExtraBold.className}`}
           >

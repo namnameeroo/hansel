@@ -21,6 +21,7 @@ export default function Magazine() {
               width={w}
               height={h}
               className="p-1"
+              key={index}
             />
           );
         })}

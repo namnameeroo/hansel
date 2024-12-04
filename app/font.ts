@@ -1,4 +1,11 @@
-import { Roboto, Rubik_Beastly, Work_Sans } from "next/font/google";
+import {
+  Cutive_Mono,
+  DotGothic16,
+  Lexend_Peta,
+  Roboto,
+  Rubik_Beastly,
+  Work_Sans,
+} from "next/font/google";
 import { Libre_Barcode_39_Extended_Text } from "next/font/google";
 
 export const rubikBeastly = Rubik_Beastly({
@@ -23,4 +30,22 @@ export const roboto = Roboto({
   variable: "--font-roboto",
   subsets: ["latin"],
   weight: ["400", "700"],
+});
+
+export const lexendPeta = Lexend_Peta({
+  variable: "--font-lexend-peta",
+  subsets: ["latin"],
+  weight: "400",
+});
+
+export const cutiveMono = Cutive_Mono({
+  variable: "--font-cutive-mono",
+  subsets: ["latin"],
+  weight: "400",
+});
+
+export const dotGothic = DotGothic16({
+  variable: "--font-dot-gothic",
+  subsets: ["latin"],
+  weight: "400",
 });

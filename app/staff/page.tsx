@@ -1,22 +1,82 @@
-import Image from "next/image";
+"use client";
+import NavBar from "../_navBar";
+import { lexendPeta } from "../font";
 
-export default function Page() {
+export default function Staff() {
+  const videoResources = [
+    {
+      id: 1,
+      src: "https://www.youtube.com/embed/A4lULzWoxoI?si=9MaoTadT4f99_SNA&rel=0",
+      width: 640,
+      height: 300,
+      title: "women in snow",
+    },
+    {
+      id: 2,
+      src: "https://www.youtube.com/embed/A4lULzWoxoI?si=9MaoTadT4f99_SNA&rel=0",
+      width: 640,
+      height: 300,
+      title: "women in snow",
+    },
+    {
+      id: 3,
+      src: "https://www.youtube.com/embed/A4lULzWoxoI?si=9MaoTadT4f99_SNA&rel=0",
+      width: 640,
+      height: 300,
+      title: "women in snow",
+    },
+    {
+      id: 4,
+      src: "https://www.youtube.com/embed/A4lULzWoxoI?si=9MaoTadT4f99_SNA&rel=0",
+      width: 640,
+      height: 300,
+      title: "women in snow",
+    },
+  ];
+  
   return (
-    <main className="w-100vw min-h-screen bg-green-70">
-      <div className="fixed left-[87px] top-[122px] flex items-end">
-        <h1 className="max-w-[803px] text-[140px]">SOHEE 100</h1>
-        {/* <NavigationMenuBar /> */}
-        <div>
-          <Image src="/assets/logo.svg" width={100} height={100} alt="logo" />
+    <main className="w-100vw flex min-h-screen flex-col overflow-x-auto bg-black max-lg:p-10 max-sm:p-5 lg:p-[87px]">
+      <header className="mb-[7.25em] flex h-[8.75em] flex-col justify-start lg:flex-row lg:items-end">
+        <h1 className="min-w-[5.75em] flex-1 text-green-70 max-lg:text-left max-sm:text-[3.5em] sm:text-[8.75em] lg:relative lg:top-[2.45rem] lg:mr-4">
+          SOHEE 100
+        </h1>
+
+        <div className="flex flex-col gap-2">
+          <div
+            className={`text-[1.2em] font-[600] text-green-70 sm:text-[2em] ${lexendPeta.className}`}
+          >
+            SOHUI, KIM, SOSIE
+          </div>
+          <NavBar />
         </div>
-        <div className="flex gap-5">
-          <button>MAIN</button>
-          <button>WORK</button>
-          <button>STAFF</button>
-          <button>PERSONAL WORK</button>
-          <button>CV·CONTACT</button>
-        </div>
-      </div>
+      </header>
+
+      <section className="grid grid-cols-2 gap-2 max-lg:mt-[5em]">
+        {/* <div className="flex items-center justify-center">
+          <iframe
+            width={videoResources[0].width}
+            height={videoResources[0].height}
+            src={videoResources[0].src}
+            title="YouTube video player"
+            className="border-0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
+          ></iframe>
+        </div> */}
+
+        {videoResources.map((video) => (
+          <div className="flex items-center justify-center" key={video.id}>
+            <iframe
+              width={video.width}
+              height={video.height}
+              src={video.src}
+              title={video.title}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            ></iframe>
+          </div>
+        ))}
+      </section>
     </main>
   );
 }
